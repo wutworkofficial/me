@@ -55,4 +55,8 @@
   .portfolio-present-block {
     height: 460px;
   }
+
+  .about-button {
+    bottom: 40px;
+  }
 }
