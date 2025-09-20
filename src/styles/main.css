@@ -345,6 +345,12 @@ section {
   padding-right: 120px;
 }
 
+@supports (-webkit-touch-callout: none) {
+  .my-activities {
+    background: url('/activities.webp') no-repeat center 70% / cover scroll;
+  }
+}
+
 .my-activities .label {
   font-weight: 500;
 }
