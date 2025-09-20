@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Me</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <link rel="preconnect" href="https://vjs.zencdn.net">
 </head>
 
 <body>
@@ -41,9 +42,12 @@
         </div>
         <div class="portfolio-present-block">
           <div class="portfolio-present-image" data-retard="0.5">
-            <a href="https://www.firster.com" target="_blank">
-              <img src="/firster.webp" alt="FIRSTER" />
-            </a>
+            <img src="/firster.webp" alt="FIRSTER" />
+            <div data-vjs-player>
+              <video id="my-player" class="video-js">
+                <source src="/present.webm" type="video/webm" />
+              </video>
+            </div>
           </div>
         </div>
       </div>

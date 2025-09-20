@@ -1,19 +1,22 @@
-const addOrRemoveActiveClassCallback = (entries) => {
+const handleAddOrRemoveActiveClass = (callback) => (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('active')
     } else {
       entry.target.classList.remove('active')
     }
+
+    callback?.()
   })
 }
 
-export const setupAddOrRemoveActiveClassObserver = () => {
+export const setupActiveSectionObserver = (callback) => {
   const options = {
     threshold: 0.2,
   }
+
   const observer = new IntersectionObserver(
-    addOrRemoveActiveClassCallback,
+    handleAddOrRemoveActiveClass(callback),
     options,
   )
 

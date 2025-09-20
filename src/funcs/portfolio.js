@@ -1,4 +1,19 @@
-const parallaxSectionCallback = () => {
+import { player } from './video-player'
+
+export const handleVideoPlayerControls = () => {
+  const target = document.querySelector('.my-portfolio-1')
+  const isActive = target.classList.contains('active')
+
+  if (isActive) {
+    player.play()
+    return
+  }
+
+  player.pause()
+  player.currentTime(0)
+}
+
+const handleParallaxSectionMove = () => {
   const target = document.querySelector('.parallax-section')
   const retard = target.getAttribute('data-retard') ?? 0.5
   const marginTop = window.scrollY * +retard
@@ -8,7 +23,7 @@ const parallaxSectionCallback = () => {
   target.style.marginTop = `-${window.scrollY * +retard}px`
 }
 
-const portfolioParallaxCallback = () => {
+const handlePortfolioPresent = () => {
   const targets = document.querySelectorAll('[class^=my-portfolio-]')
 
   targets.forEach((target) => {
@@ -33,9 +48,9 @@ const portfolioParallaxCallback = () => {
   })
 }
 
-export const setupParallaxScrolling = () => {
+export const setupPortfolioController = () => {
   window.addEventListener('scroll', () => {
-    parallaxSectionCallback()
-    portfolioParallaxCallback()
+    handleParallaxSectionMove()
+    handlePortfolioPresent()
   })
 }

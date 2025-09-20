@@ -10,7 +10,7 @@ const aboutOverlayToggleCallback = () => {
   overlay.classList.add('active')
 }
 
-export const setupAboutOverlayToggleController = () => {
+export const setupAboutController = () => {
   const aboutButton = document.querySelector('.about-button')
   const closeButton = document.querySelector('.about-close-button')
 

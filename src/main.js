@@ -1,8 +1,14 @@
+import 'video.js/dist/video-js.css'
 import './styles.css'
-import { setupParallaxScrolling } from './funcs/portfolio'
-import { setupAboutOverlayToggleController } from './funcs/about'
-import { setupAddOrRemoveActiveClassObserver } from './funcs/observer'
 
-setupParallaxScrolling()
-setupAddOrRemoveActiveClassObserver()
-setupAboutOverlayToggleController()
+import {
+  setupPortfolioController,
+  handleVideoPlayerControls,
+} from './funcs/portfolio'
+import { setupAboutController } from './funcs/about'
+import { setupActiveSectionObserver } from './funcs/observer'
+
+setupActiveSectionObserver(handleVideoPlayerControls)
+
+setupPortfolioController()
+setupAboutController()
