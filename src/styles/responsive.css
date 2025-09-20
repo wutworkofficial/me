@@ -59,4 +59,8 @@
   .about-button {
     bottom: 100px;
   }
+
+  .portfolio-present-image {
+    width: 76%;
+  }
 }
