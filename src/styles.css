@@ -30,7 +30,7 @@ img {
   bottom: 40%;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: #090808;
   transition: width 0.3s ease;
 }
@@ -63,16 +63,12 @@ section {
   padding: 20px 0 0 20px;
 }
 
-.parallax-section .label {
-  font-size: 20px;
-}
-
 /* Intro section ==================================================== */
 
 .intro {
   color: #fff;
   background-color: #090808;
-  height: 100vh;
+  height: 98vh;
 }
 
 .intro-image {
@@ -118,7 +114,7 @@ section {
   left: 0;
   bottom: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.93);
+  background: rgba(0, 0, 0, 0.95);
   overflow-x: hidden;
   overflow-y: scroll;
   opacity: 0;
@@ -138,17 +134,38 @@ section {
   width: 42px;
   height: 42px;
   cursor: pointer;
-  border: 1px solid #fff;
-  background: url('/close-icon.svg') no-repeat center center / 55%;
+}
+
+.about-close-button:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  transform: rotate(45deg);
+}
+
+.about-close-button:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  margin: 0 auto;
+  background: #ffffff;
+  transform: rotate(-45deg);
 }
 
 .about-content-text {
   color: #fff;
-  font-size: 20px;
   padding: 80px 200px 40px 100px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .about-content-text > div {
@@ -158,11 +175,7 @@ section {
 }
 
 .head {
-  font-size: 28px;
-}
-
-.married {
-  color: #f85cac;
+  font-size: 24px;
 }
 
 /* Portfolio section ==================================================== */
@@ -192,11 +205,11 @@ section {
   font-size: 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(200px);
-  transition: opacity 1.2s, visibility 1.2s, transform 0.6s ease-in-out;
+  transform: translateY(100px);
+  transition: opacity 1s, visibility 1s, transform 0.6s ease-in-out;
 }
 
 .active .portfolio-content-text {
@@ -213,9 +226,9 @@ section {
 }
 
 .portfolio-present-image {
-  width: 66%;
+  width: 67%;
   transform: scale(0);
-  box-shadow: -1px -2px 27px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: -1px -2px 30px 1px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
@@ -264,7 +277,7 @@ section {
   color: #b6b6b6;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s, visibility 0.8s;
+  transition: all 0.8s ease-in-out;
 }
 
 .active .experience-content-row {
@@ -273,7 +286,7 @@ section {
 }
 
 .active .experience-content-row:nth-child(2) {
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .active .experience-content-row:nth-child(3) {
@@ -281,11 +294,11 @@ section {
 }
 
 .active .experience-content-row:nth-child(4) {
-  transition-delay: 0.8s;
+  transition-delay: 0.9s;
 }
 
 .active .experience-content-row:nth-child(5) {
-  transition-delay: 1.1s;
+  transition-delay: 1.2s;
 }
 
 .experience-content-row:hover {
@@ -318,6 +331,14 @@ section {
   position: relative;
   z-index: 10;
   font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s, visibility 1s;
+}
+
+.active .activities-content-text {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Contact me section ==================================================== */

@@ -2,7 +2,7 @@ import videojs from 'video.js'
 
 const options = {
   loop: true,
-  // autoplay: 'muted',
+  autoplay: 'muted',
 }
 
 export const player = videojs('my-player', options)
