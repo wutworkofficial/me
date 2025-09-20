@@ -1,0 +1,328 @@
+body {
+  margin: 0;
+  color: #090808;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: #090808;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.nav {
+  display: inline-block;
+  position: relative;
+}
+
+.nav:before {
+  content: '';
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #090808;
+  transition: width 0.3s ease;
+}
+
+.nav:hover:before {
+  width: 100%;
+}
+
+#app {
+  padding-bottom: 300px;
+}
+
+#app,
+.parallax-section > div,
+section {
+  position: relative;
+}
+
+.parallax-section > div,
+section {
+  z-index: 10;
+  overflow: hidden;
+}
+
+.intro .intro-content-text,
+.parallax-section .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 0 0 20px;
+}
+
+.parallax-section .label {
+  font-size: 20px;
+}
+
+/* Intro section ==================================================== */
+
+.intro {
+  color: #fff;
+  background-color: #090808;
+  height: 95vh;
+}
+
+.intro-image {
+  width: 500px;
+  height: 90%;
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-image div {
+  color: #fff;
+}
+
+.intro-content-text {
+  max-width: 36%;
+  z-index: 10;
+}
+
+/* About ==================================================== */
+
+.about-button {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.about-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.93);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.about-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.about-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  background: url('/close-icon.svg') no-repeat center center / 55%;
+}
+
+.about-content-text {
+  color: #fff;
+  font-size: 20px;
+  padding: 80px 200px 40px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-content-text > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.head {
+  font-size: 28px;
+}
+
+.married {
+  color: #f85cac;
+}
+
+/* Portfolio section ==================================================== */
+
+.my-portfolio-1 .portfolio-present-block {
+  background: url('/firster-bg.webp') no-repeat bottom center / cover fixed;
+}
+
+.my-portfolio-2 .portfolio-present-block {
+  background: url('/firster-bof-bg.webp') no-repeat bottom center / cover fixed;
+}
+
+.portfolio-content-block {
+  background-color: #f6f2ef;
+  display: grid;
+  grid-template-columns: 50%;
+  justify-content: end;
+  padding: 100px 80px 40px;
+  overflow: hidden;
+}
+
+.portfolio-content-text {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(200px);
+  transition: opacity 1.2s, visibility 1.2s, transform 0.6s ease-in-out;
+}
+
+.active .portfolio-content-text {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.portfolio-present-block {
+  height: 800px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.portfolio-present-image {
+  width: 66%;
+  transform: scale(0);
+  box-shadow: -1px -2px 27px 1px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-present-image img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.project-name {
+  font-size: 48px;
+}
+
+.project-description {
+  color: #909090;
+}
+
+/* My experiences section ==================================================== */
+
+.my-experiences {
+  color: #fff;
+  background-color: #090808;
+}
+
+.experiences-content-block {
+  padding: 140px 80px 100px 80px;
+  display: grid;
+  row-gap: 16px;
+}
+
+.experience-content-row {
+  padding: 24px 36px;
+  border-radius: 10px;
+  background-color: #161515;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 8px;
+  color: #b6b6b6;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s, visibility 0.8s;
+}
+
+.active .experience-content-row {
+  opacity: 1;
+  visibility: visible;
+}
+
+.active .experience-content-row:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.active .experience-content-row:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.active .experience-content-row:nth-child(4) {
+  transition-delay: 0.8s;
+}
+
+.active .experience-content-row:nth-child(5) {
+  transition-delay: 1.1s;
+}
+
+.experience-content-row:hover {
+  background-color: #232323;
+}
+
+.experience-content-company-name {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* My activities section ==================================================== */
+
+.my-activities {
+  height: 100vh;
+  background: url('/activities.webp') no-repeat center 70% / cover fixed;
+  display: grid;
+  grid-template-columns: 46%;
+  align-items: center;
+  justify-content: end;
+  padding-right: 120px;
+}
+
+.my-activities .label {
+  font-weight: 500;
+}
+
+.activities-content-text {
+  position: relative;
+  z-index: 10;
+  font-weight: 500;
+}
+
+/* Contact me section ==================================================== */
+
+.contact-me {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 300px;
+  background-color: #e6e7e0;
+  z-index: 1;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.contact-me-content-text {
+  font-size: 52px;
+  color: #090808;
+}
