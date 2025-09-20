@@ -1,5 +1,6 @@
 import 'video.js/dist/video-js.css'
-import './styles.css'
+import './styles/main.css'
+import './styles/responsive.css'
 
 import {
   setupPortfolioController,

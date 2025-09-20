@@ -1,0 +1,58 @@
+@media only screen and (max-width: 767px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .portfolio-content-block {
+    grid-template-columns: 1fr;
+    padding: 100px 40px 40px;
+  }
+
+  .portfolio-present-block {
+    height: 560px;
+  }
+
+  .portfolio-present-image {
+    width: 70%;
+  }
+
+  .experiences-content-block {
+    padding: 140px 40px 100px 40px;
+  }
+
+  .experience-content-row {
+    grid-template-columns: 1fr;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .my-activities {
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-content: start;
+    padding: 100px 40px 40px;
+  }
+
+  .contact-me-content-text {
+    font-size: 2.2rem;
+  }
+
+  .about-close-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about-content-text {
+    padding: 80px 70px 40px 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact-me-content-text {
+    font-size: 1.38rem;
+  }
+
+  .portfolio-present-block {
+    height: 460px;
+  }
+}

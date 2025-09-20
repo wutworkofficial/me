@@ -1,3 +1,7 @@
+:root {
+  font-size: 18px;
+}
+
 body {
   margin: 0;
   color: #090808;
@@ -5,9 +9,13 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
+  font-size: 1rem;
   line-height: 1.5;
   background-color: #090808;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -128,7 +136,7 @@ section {
 }
 
 .about-close-button {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   width: 42px;
@@ -171,25 +179,40 @@ section {
 .about-content-text > div {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .head {
-  font-size: 24px;
+  font-size: 1.33rem;
+}
+
+.married {
+  color: rgb(225 70 150);
 }
 
 /* Portfolio section ==================================================== */
-
-.my-portfolio-1 .portfolio-present-block {
-  background: url('/firster-bg.webp') no-repeat bottom center / cover fixed;
-}
 
 .my-portfolio-1.active .portfolio-present-image > img {
   opacity: 0;
 }
 
+.my-portfolio-1 .portfolio-present-block {
+  background: url('/firster-bg.webp') no-repeat bottom center / cover fixed;
+}
+
 .my-portfolio-2 .portfolio-present-block {
   background: url('/firster-bof-bg.webp') no-repeat bottom center / cover fixed;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .my-portfolio-1 .portfolio-present-block {
+    background: url('/firster-bg.webp') no-repeat bottom center / cover scroll;
+  }
+
+  .my-portfolio-2 .portfolio-present-block {
+    background: url('/firster-bof-bg.webp') no-repeat bottom center / cover
+      scroll;
+  }
 }
 
 .portfolio-content-block {
@@ -202,7 +225,6 @@ section {
 }
 
 .portfolio-content-text {
-  font-size: 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -246,7 +268,7 @@ section {
 }
 
 .project-name {
-  font-size: 48px;
+  font-size: 2.7rem;
   margin-left: -3px;
 }
 
@@ -290,15 +312,15 @@ section {
 }
 
 .active .experience-content-row:nth-child(3) {
-  transition-delay: 0.5s;
+  transition-delay: 0.4s;
 }
 
 .active .experience-content-row:nth-child(4) {
-  transition-delay: 0.9s;
+  transition-delay: 0.7s;
 }
 
 .active .experience-content-row:nth-child(5) {
-  transition-delay: 1.2s;
+  transition-delay: 1s;
 }
 
 .experience-content-row:hover {
@@ -307,7 +329,7 @@ section {
 
 .experience-content-company-name {
   color: #fff;
-  font-size: 20px;
+  font-size: 1.1rem;
   margin-bottom: 16px;
 }
 
@@ -357,6 +379,6 @@ section {
 }
 
 .contact-me-content-text {
-  font-size: 52px;
+  font-size: 2.9rem;
   color: #090808;
 }
