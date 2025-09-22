@@ -1,13 +1,19 @@
 import { player } from './video-player'
 
+let timeout
+
 export const handleVideoPlayerControls = () => {
   const target = document.querySelector('.my-portfolio-1')
   const isActive = target.classList.contains('active')
 
+  const delay = 1500
+
   if (isActive) {
-    player.play()
+    timeout = setTimeout(() => player.play(), delay)
     return
   }
+
+  clearTimeout(timeout)
 
   player.pause()
   player.currentTime(0)

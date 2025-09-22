@@ -1,13 +1,13 @@
 const aboutOverlayToggleCallback = () => {
-  const overlay = document.querySelector('.about-overlay')
-  const isActive = overlay.classList.contains('active')
+  const target = document.body
+  const isActive = target.classList.contains('show-about-us')
 
   if (isActive) {
-    overlay.classList.remove('active')
+    target.classList.remove('show-about-us')
     return
   }
 
-  overlay.classList.add('active')
+  target.classList.add('show-about-us')
 }
 
 export const setupAboutController = () => {

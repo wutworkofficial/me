@@ -107,6 +107,10 @@ section {
 
 /* About ==================================================== */
 
+body.show-about-us {
+  overflow: hidden;
+}
+
 .about-button {
   position: absolute;
   left: 20px;
@@ -114,6 +118,7 @@ section {
   z-index: 10;
   cursor: pointer;
   font-size: 0.9rem;
+  color: #ffffff80;
 }
 
 .about-overlay {
@@ -124,20 +129,19 @@ section {
   bottom: 0;
   z-index: 100;
   background: rgba(0, 0, 0, 0.95);
-  overflow-x: hidden;
-  overflow-y: scroll;
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0.4s;
 }
 
-.about-overlay.active {
+.show-about-us .about-overlay {
   opacity: 1;
   visibility: visible;
 }
 
 .about-close-button {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   width: 42px;
@@ -175,6 +179,9 @@ section {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .about-content-text > div {
@@ -229,16 +236,43 @@ section {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(100px);
-  transition: opacity 1s, visibility 1s, transform 0.6s ease-in-out;
 }
 
-.active .portfolio-content-text {
+.portfolio-content-text > div:first-child {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: opacity 1s ease, transform 0.6s ease;
+}
+
+.active .portfolio-content-text > div:first-child {
   opacity: 1;
-  visibility: visible;
   transform: translateY(0);
+  transition: opacity 1s ease 0.2s, transform 0.6s ease;
+}
+
+.portfolio-content-text > div:nth-child(2) {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.active .portfolio-content-text > div:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease 0.25s, transform 0.3s ease 0.25s;
+}
+
+.portfolio-content-text > div:nth-child(3) {
+  opacity: 0;
+  transition: opacity 1s;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.active .portfolio-content-text > div:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease 0.4s, transform 0.3s ease 0.4s;
 }
 
 .portfolio-present-block {
@@ -249,7 +283,7 @@ section {
 }
 
 .portfolio-present-image {
-  width: 67%;
+  width: 60%;
   transform: scale(0);
   box-shadow: -1px -2px 30px 1px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -299,29 +333,27 @@ section {
   column-gap: 8px;
   color: #b6b6b6;
   opacity: 0;
-  visibility: hidden;
-  transition: all 0.8s ease-in-out;
+  transition: opacity 0.8s ease, background-color 0.4s ease;
 }
 
 .active .experience-content-row {
   opacity: 1;
-  visibility: visible;
 }
 
 .active .experience-content-row:nth-child(2) {
-  transition-delay: 0.1s;
+  transition: opacity 0.8s ease 0.1s, background-color 0.4s ease;
 }
 
 .active .experience-content-row:nth-child(3) {
-  transition-delay: 0.4s;
+  transition: opacity 0.8s ease 0.4s, background-color 0.4s ease;
 }
 
 .active .experience-content-row:nth-child(4) {
-  transition-delay: 0.7s;
+  transition: opacity 0.8s ease 0.7s, background-color 0.4s ease;
 }
 
 .active .experience-content-row:nth-child(5) {
-  transition-delay: 1s;
+  transition: opacity 0.8s ease 1s, background-color 0.4s ease;
 }
 
 .experience-content-row:hover {
@@ -361,13 +393,13 @@ section {
   z-index: 10;
   font-weight: 500;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s, visibility 1s;
+  transition: opacity 1s ease;
 }
 
 .active .activities-content-text {
   opacity: 1;
   visibility: visible;
+  transition: opacity 1s ease 0.4s;
 }
 
 /* Contact me section ==================================================== */
