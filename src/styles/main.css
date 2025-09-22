@@ -32,7 +32,7 @@ img {
   position: relative;
 }
 
-.nav:before {
+.nav::before {
   content: '';
   position: absolute;
   bottom: 40%;
@@ -43,7 +43,7 @@ img {
   transition: width 0.3s ease;
 }
 
-.nav:hover:before {
+.nav:hover::before {
   width: 100%;
 }
 
@@ -118,7 +118,6 @@ body.show-about-us {
   z-index: 10;
   cursor: pointer;
   font-size: 0.9rem;
-  color: #ffffff80;
 }
 
 .about-overlay {
@@ -149,7 +148,7 @@ body.show-about-us {
   cursor: pointer;
 }
 
-.about-close-button:before {
+.about-close-button::before {
   content: '';
   position: absolute;
   left: 0;
@@ -161,7 +160,7 @@ body.show-about-us {
   transform: rotate(45deg);
 }
 
-.about-close-button:after {
+.about-close-button::after {
   content: '';
   position: absolute;
   left: 0;
@@ -283,7 +282,7 @@ body.show-about-us {
 }
 
 .portfolio-present-image {
-  width: 60%;
+  width: 66%;
   transform: scale(0);
   box-shadow: -1px -2px 30px 1px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -305,6 +304,26 @@ body.show-about-us {
 .project-name {
   font-size: 2.7rem;
   margin-left: -3px;
+}
+
+.project-name span {
+  display: inline-block;
+}
+
+.project-name .i {
+  position: relative;
+  line-height: 2rem;
+  margin-left: 4px;
+}
+
+.project-name .i::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 1px;
+  width: 4px;
+  height: 4px;
+  background-color: #090808;
 }
 
 .project-description {
