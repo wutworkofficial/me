@@ -3,6 +3,12 @@
     font-size: 16px;
   }
 
+  .my-activities,
+  .my-portfolio-2 .portfolio-present-block,
+  .my-portfolio-1 .portfolio-present-block {
+    background-attachment: scroll;
+  }
+
   .portfolio-content-block {
     grid-template-columns: 1fr;
     padding: 100px 40px 40px;
