@@ -47,6 +47,16 @@ img {
   width: 100%;
 }
 
+.nav-icon {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  background: url('/arrow-icon.svg') no-repeat center / contain;
+}
+
 #app {
   padding-bottom: 300px;
 }
@@ -443,4 +453,9 @@ body.show-about-us {
 .contact-me-content-text {
   font-size: 2.9rem;
   color: #090808;
+}
+
+.contact-me-content-text .nav-icon {
+  width: 0.6em;
+  height: 0.6em;
 }
