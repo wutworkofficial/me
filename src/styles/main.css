@@ -194,7 +194,7 @@ body.show-about-us {
 }
 
 .married {
-  color: rgb(225 70 150);
+  color: rgb(213 80 149);
 }
 
 /* Portfolio section ==================================================== */
@@ -383,6 +383,10 @@ body.show-about-us {
   color: #fff;
   font-size: 1.1rem;
   margin-bottom: 16px;
+}
+
+.present {
+  color: rgb(23, 134, 41);
 }
 
 /* My activities section ==================================================== */
