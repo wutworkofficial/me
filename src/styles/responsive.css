@@ -28,8 +28,6 @@
 
   .experience-content-row {
     grid-template-columns: 1fr;
-    opacity: 1;
-    visibility: visible;
   }
 
   .my-activities {

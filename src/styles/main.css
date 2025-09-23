@@ -383,6 +383,14 @@ body.show-about-us {
   background-color: #090808;
 }
 
+.project-name .i.purple {
+  color: #6165b0;
+}
+
+.project-name .i.purple::before {
+  background-color: #6165b0;
+}
+
 .project-description {
   color: #909090;
 }
