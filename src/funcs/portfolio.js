@@ -8,7 +8,7 @@ export const handleVideoPlayerControls = () => {
 
   const delay = 2000
 
-  if (isActive) {
+  if (isActive && !player.played()) {
     timeout = setTimeout(() => player.play(), delay)
     return
   }
