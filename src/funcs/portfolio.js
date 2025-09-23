@@ -1,6 +1,6 @@
 import { player } from './video-player'
 
-let timeout
+// let timeout
 
 export const handleVideoPlayerControls = () => {
   const target = document.querySelector('.my-portfolio-1')
@@ -13,10 +13,10 @@ export const handleVideoPlayerControls = () => {
     return
   }
 
-  clearTimeout(timeout)
+  // clearTimeout(timeout)
 
-  player.pause()
-  player.currentTime(0)
+  // player.pause()
+  // player.currentTime(0)
 }
 
 const handleParallaxSectionMove = () => {
