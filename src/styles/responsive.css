@@ -26,8 +26,14 @@
     padding: 140px 40px 100px 40px;
   }
 
+  .experience-content-period {
+    margin-bottom: 4px;
+  }
+
   .experience-content-row {
     grid-template-columns: 1fr;
+    opacity: 1;
+    transform: translateY(0) rotateY(0);
   }
 
   .my-activities {
