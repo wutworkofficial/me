@@ -6,7 +6,7 @@ export const handleVideoPlayerControls = () => {
   const target = document.querySelector('.my-portfolio-1')
   const isActive = target.classList.contains('active')
 
-  const delay = 2000
+  const delay = 3000
 
   if (isActive && !player.played()) {
     timeout = setTimeout(() => player.play(), delay)
